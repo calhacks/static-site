@@ -543,7 +543,12 @@ textarea::-moz-placeholder {
   text-decoration: none;
   font-family: Space Grotesk;
 }
-#footer #footer-content .footer-links .footer-links-column a:not(:last-child) img {
+#footer
+  #footer-content
+  .footer-links
+  .footer-links-column
+  a:not(:last-child)
+  img {
   margin-right: 1rem;
 }
 #footer #footer-content .footer-links .footer-links-column .connect-icon {
