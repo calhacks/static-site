@@ -1,4 +1,4 @@
-# static-site
+# 🧸 calhacks.io
 
 ### Quickstart
 
