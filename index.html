@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Sentry Error Monitoring -->
+  <script src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js" integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq" crossorigin="anonymous"></script>
+  <script>
+    Sentry.init({
+      dsn: "https://49be4fdd0db3435884b9a5c33b20f5ab@sentry.io/2836115",
+      ignoreErrors: [
+        "Non-Error promise rejection captured with value: Timeout",
+        "TypeError: NetworkError when attempting to fetch resource.",
+        "Error: ResizeObserver loop limit exceeded",
+      ],
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158603824-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-158603824-3");
+  </script>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+  <link rel="shortcut icon" href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/favicon.ico" />
+
+  <link rel="stylesheet" href="./css/index/index.css?v=2" />
+
+  <!-- Bootstrap -->
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Google Fonts: Space Grotesk, Space Mono, Karla -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+  <!-- For responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+
+  <title>Hackathons at Berkeley</title>
+
+  <!-- SEO for 11.0 -->
+  <meta name="description" content="Cal Hacks is the world's largest collegiate hackathon hosted at UC Berkeley, fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hackathons at Berkeley" />
+  <meta property="og:description" content="Cal Hacks is the world's largest collegiate hackathon hosted at UC Berkeley, fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology." />
+  <meta property="og:image" content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg" />
+  <meta property="og:url" content="https://calhacks.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hackathons at Berkeley" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@calhacks">
+  <meta name="twitter:creator" content="@calhacks">
+  <meta name="twitter:title" content="Cal Hacks">
+  <meta name="twitter:description" content="Cal Hacks is the world's largest collegiate hackathon hosted at UC Berkeley, fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology.">
+  <meta name="twitter:image" content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg">
+  <meta property="twitter:image:alt" content="Cal Hacks">
+</head>
+
+<body>
+  <!-- Splash -->
+  <div id="splash">
+    <!-- <a href="https://forms.gle/gwn3mUhrV3KqXSTP8" target="_blank" id="banner">Spring Recruitment: Apply to Join the Cal Hacks Team!</a> -->
+    <a href="/"><img id="logo" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png"/></a>
+
+    <!-- Responsive navbar -->
+    <div id="topnav">
+      <div class="nav-left">
+        <div class="nav-page">
+          <a href="/" class="page active">Home</a>
+          <div class="nav-indicator active"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/about" class="page">About</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/inclusion" class="page">Inclusion</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/sponsor" class="page">Sponsor Us</a>
+          <div class="nav-indicator"></div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <a href="mailto:team@calhacks.io">Contact Us</a>
+        <!-- Initiatives Dropdown -->
+        <div class="nav-page nav-dropdown nav-desktop-only">
+          <a href="#" class="page">Other Initiatives</a>
+          <div class="nav-indicator"></div>
+          <div class="dropdown">
+            <a href="http://cubstart.com">Cubstart</a>
+            <a href="https://ai.calhacks.io/">UC Berkeley AI Hackathon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Replace initiatives dropdown in responsive menu with contents since it is already a vertical menu -->
+      <div class="nav-page nav-responsive-only">
+        <a href="http://cubstart.com" class="page">Cubstart</a>
+        <div class="nav-indicator"></div>
+      </div>
+      <div class="nav-page nav-responsive-only">
+        <a href="https://ai.calhacks.io" class="page">UC Berkeley AI Hackathon</a>
+        <div class="nav-indicator"></div>
+      </div>
+    </div>
+    <a id="toggle-icon" href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <!-- MLH Badge -->
+    <!-- <a id="mlh-trust-badge" href="https://mlh.io/seasons/2024/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-gray.svg" alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a> -->
+
+    <!-- Splash body -->
+    <div id="splash-body">
+      <div id="splash-img">
+        <img id="splash-main" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/coding-ddoski.png" />
+        <img class="splash-icons one" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/splash_icon_1" />
+        <img class="splash-icons two" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/splash_icon_2" />
+        <img class="splash-icons three" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/splash_icon_3" />
+        <img class="splash-icons four" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/splash_icon_4" />
+      </div>
+      <div id="splash-content">
+        <img id="splash-background-outline" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/terminal_outline" />
+        <div id="splash-content-front">
+          <img id="splash-background-main" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/terminal" />
+          <div id="splash-text-container">
+            <div id="splash-text">
+              <h1>Cal Hacks 11.0</h1>
+              <h5>
+                We are a team of students with a common goal — cultivating a platform where people can build, learn, and experiment without
+                boundaries. <br /><br />
+                <!-- Come join us this <b>October 27-29</b> for the world's largest collegiate hackathon! <b>Early interest form below:</b> -->
+                Fill out our <b>early interest form</b> and be the first to hear about our next event!
+              </h5>
+              <div>
+                <!-- <button onclick="window.open('https://bit.ly/calhacks-app-sp23', '_blank')">
+                  Apply Now
+                  <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/button_icon" />
+                </button> -->
+              </div>
+              <p>
+                
+              </p>
+              <form id="email-signup-form">
+                <!-- <p>Early Interest Form:</p> -->
+                <div class="form-body">
+                  <input type="email" id="email-input" name="email" placeholder="ddoski@calhacks.io" required>
+                  <button type="submit">Submit</button>
+                </div>
+                <span id="status-description">
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Splash footer -->
+    <!-- <img id="splash-footer-background" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/wave_1" />
+    <div style="width: 100%; align-items:center;background-color:#85a8ec; padding-bottom:15%;display:flex; flex-direction:column;">
+    <div id="splash-footer">
+      <div id="splash-footer-content">
+        <div id="splash-footer-text">
+          <h1>Why Cal Hacks?</h1>
+          <br>
+          <h2>Our Community</h2>
+          <br>
+          <p>We’re dedicated to fostering a welcoming and inclusive club culture for our directors! This past semester, we’ve hosted
+          potlucks, a pizza-making movie night, bouldering socials, picnics on the Glade, a snowy retreat in Tahoe, and so much more (& too many Moffitt
+          study sessions to count). From visiting Japan to going to Six Flags Fright Fest, our members frequently spend time
+          together outside of Berkeley and even after graduation!</p>
+          <br>
+          <h2>Our Vision</h2>
+          <br>
+          <p>Cal Hacks is a community of people with a common goal—cultivating a platform where people can build, learn, and create
+          without boundaries. During the spring semester, we encourage directors to brainstorm and implement their own initiatives
+          with the support of other directors. That means YOU could spearhead the next Cal Hacks initiative.</p>
+          <br>
+          <h2>Our Impact</h2>
+          <br>
+          <p>From hosting a yearly hackathon for 2500+ people to teaching the Cubstart Decal to hundreds of Berkeley students, we
+          strive to leave a lasting, positive impact on the Berkeley community and beyond. Becoming a director means you get to
+          become part of that legacy whether you’re contributing new ideas for the hackathon, fellowship, Cubstart, or starting your own initiative. Come
+          help us continue making history at Cal Hacks 10.0!</p>
+        </div>
+        <div style="width: 50%;">
+          <img src="https://iili.io/HY4738P.png" style="width: 100%; height:22%; object-fit:cover; object-position: 100% 0%;">
+          <img src="https://iili.io/HY4KlGs.jpg" style="width: 100%; height:22%; object-fit:cover;">
+          <img src="https://iili.io/HY4nx7j.png" style="width: 100%; height:22%; object-fit:cover; object-position: 100% 50%">
+        </div>
+      </div>
+    </div>
+    <h1 id="promovid">Spring 2023 Promo</h1>
+    <iframe width="840" height="573" src="https://www.youtube.com/embed/DAmaAO6RvrI" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen style="border-radius:3%"></iframe> -->
+      <!-- </div>
+  </div> --> 
+
+  <!-- You belong at Cal Hacks! -->
+  <!-- <div style="width: 100%;" id="belong-block">
+    <div class="belong-header-wrapper">
+      <div class="belong-parallax">
+        <img id="belong-1" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/belong-1.svg">
+        <img id="belong-2" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/belong-2.svg">
+        <img id="belong-3" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/belong-3.svg">
+      </div>
+      <h3 id="belong-header">You belong in Cal Hacks!</h3>
+    </div>
+    <div class="belong-content-wrapper">
+      <div class="fruit-ddoski">
+        <img id="fruit-ddoski" alt="fruit ddoski" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/fruit_ddoski" />
+      </div>
+      <div class="belong-text">
+        <p>
+          We’re a small, tight-knit team of undergrads across English, statistics, cognitive science, business, linguistics,
+          economics, and other majors — of course, including computer science and data science — and we’d love to have you join us
+          this semester!
+          <br><br>
+          Our teams span a wide breadth of responsibilities, so we need a diverse range of skillsets across many disciplines. 
+          No matter where your passions and interests lie, there's always a place for you on the Cal Hacks team!
+        </p>
+        <button onclick="window.open(`https://bit.ly/calhacks-app-f23`, `_blank`)">Director Application</button>
+        <button onclick="window.open(`https://bit.ly/calhacks-f23`, `_blank`)">Learn More</button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- So a hackathon is just coding -->
+  <!-- <div style="width: 100%" id="hackathon-explanation">
+    <div class="app-center">
+      <h3>Recruitment Timeline</h3>
+      <div id="hackathon-explanation-body">
+        <div class="timeline-container">
+          <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>8/23 - 9/1<br></strong>
+              <span style="opacity:65%">Sproul Plaza</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Tabling</p>
+              <br>
+              <p style="opacity: 65%">Come chat with our directors and get your questions answered — we'll have swag to give!</p>
+            </div>
+          </div>
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>8/24<br></strong>
+              <span style="opacity:65%">2pm - 6pm @ Upper Sproul</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Calapalooza</p>
+              <br>
+              <p style="opacity: 65%">Spend some time with our directors at our Calapalooza booth!</p>
+            </div>
+          </div> -->
+          <!-- <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>1/22 <br></strong>
+              <span style="opacity:65%">2pm - 4pm @ Haas School of Business</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Starting Up at Berkeley</p>
+              <br>
+              <p style="opacity: 65%">Get an overview of startup orgs at Berkeley, as well as other pathways into startups. Meet some of our directors who have pipelined into the VC world from Cal Hacks!</p>
+            </div>
+          </div> -->
+          <!-- <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>8/31<br></strong>
+              <span style="opacity:65%">8pm - 10pm @ Dwinelle 88</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Infosession</p>
+              <br>
+              <p style="opacity: 65%">We'll be hosting an infosession to explain our initiatives, go through our recruitment/interview processes, and answer
+              your questions.</p>
+            </div>
+          </div> -->
+          <!-- <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>1/31<br></strong>
+              <span style="opacity:65%">8pm - 10pm @ Dwinelle 88</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Meet & Eat w/ Directors</p>
+              <br>
+              <p style="opacity: 65%">Join us for a night of free food, fun, swag, and getting to know the club a little better. You’ll be able to meet the directors in a casual setting and learn about their experience in Cal Hacks!</p>
+            </div>
+          </div> -->
+          <!-- <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>9/1<br></strong>
+              <span style="opacity:65%">Online</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Applications Due</p>
+              <br>
+              <p style="opacity: 65%">Be sure to get your applications in by 11:59pm! Apply <a style="color:white; font-weight: normal" href="https://bit.ly/calhacks-app-f23" target="_blank">here.</a></p>
+            </div>
+          </div>
+          <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>9/3-9/4<br></strong>
+              <span style="opacity:65%">Invite Only</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Interviews</p>
+            </div>
+          </div>
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <strong>9/6<br></strong>
+              <span style="opacity:65%">8pm - 10pm @ SOCS 60</span>
+              <br><br>
+              <p style="font-size: 1.25rem">Social Night (Invite Only)</p>
+            </div>
+          </div>
+        </div>
+        <div id="hackathon-explanation-image">
+          <img class="phone-ddoski" alt="phone-ddoski" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/phone-ddoski.svg" />
+          <img class="icon one" id="squiggle" alt="squiggle" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/squiggle.svg" />
+          <img class="icon two" id="cloud" alt="cloud" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/cloud.svg" />
+          <img class="icon three" id="hexagon" alt="hexagon" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/hexagon.svg" />
+          <img style="margin-top: 130%" class="phone-ddoski" alt="drawing-ddoski" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/drawing_ddoski" />
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!--Past Hackathons-->
+ <!-- <div id="past-hacks">
+    <img id="past-hacks-background" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/shape_background.svg" />
+    <div id="past-hacks-text">
+      <h2>Cal Hacks Community</h2>
+      <p>We make the world's largest collegiate hackathon happen, and we thrive by fostering a tightly-knit community.</p>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <!-- <div class="carousel" id="past-hacks-carousel">
+        <div class="carousel__slide"><img class="slide__image" style="object-position: 0% 100%;"
+          src="https://iili.io/HY6lrlf.png"
+          alt=""></div> 
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6zjfI.png"
+            alt=""></div>
+            <div class="carousel__slide"><img class="slide__image"
+              src="https://iili.io/HY4FO2R.jpg"
+              alt=""></div>
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6I7If.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6uYf2.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image" style="object-position: 100% 100%"
+            src="https://iili.io/HY6l36G.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6GjqX.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6MuYG.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image" style="object-position: 0% 100%"
+            src="https://iili.io/HY6XQ6P.png"
+            alt=""></div>
+          <div class="carousel__slide"><img class="slide__image"
+            src="https://iili.io/HY6SRff.png"
+            alt=""></div>
+            </div>
+      </div>
+  </div> --> 
+
+  <!-- FAQ -->
+  <!-- <div id="faq">
+    <div class="app-center">
+      <h3>Frequently Asked Questions</h3>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>What is a hackathon?</h4>
+        </div>
+        <p class="faq-answer">
+          Put simply, a hackathon is a chance to build whatever you want. Have an idea? Cal Hacks is the place to make it a reality, whether it’s through coding, art, design, hardware, or something we haven’t thought of yet.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>Do I need to be a CS/DS major to apply?</h4>
+        </div>
+        <p class="faq-answer">
+Nope—all majors/backgrounds are welcome. Our current director team spans across computer science, cognitive science,
+data science, English, statistics, linguistics, economics, business, and other majors, and we’re more than happy to grow
+this list.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>What can I get out of Cal Hacks?</h4>
+        </div>
+        <p class="faq-answer">
+Cal Hacks directors all operate with a ton of autonomy, so it’s a perfect opportunity to further your leadership skills!
+We also have a ton of cool director swag & socials throughout the semester :)        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>Do I need to have attended Cal Hacks or other hackathons to apply?</h4>
+        </div>
+        <p class="faq-answer">
+Nope! Especially during COVID, we understand that not a lot of people have experiences attending events like Cal Hacks,
+so we’re open to everyone who is passionate about building the future of hackathons. Having attended or organized events
+is still a plus, but never a requirement.        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>Will Cal Hacks 10.0 be an in-person event?</h4>
+        </div>
+        <p class="faq-answer">
+Cal Hacks 10.0 will be fully in-person this fall!        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>What does Cal Hacks do aside from its annual event?</h4>
+        </div>
+        <p class="faq-answer">
+We run experimental initiatives like Cubstart and more during the spring.        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>What is the time commitment as a Cal Hacks director?</h4>
+        </div>
+        <p class="faq-answer">
+You’ll likely be spending 4-6 hours a week on Cal Hacks related work, including our weekly team-wide meeting. But our
+team is very close and spends a lot of time studying or socializing together as well!        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this);">
+          <div class="plus-minus"></div>
+          <h4>Got more questions?</h4>
+        </div>
+        <p class="faq-answer">
+          Feel free to email team@calhacks.io and we’ll get back to you as soon as possible! You can also chat with our directors
+          through our virtual/in-person tabling events and infosessions.  </p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- ACTIVATE WHEN SPONSORS ARE ADDED -->
+  <!-- <div id="sponsors">
+    <div class="app-center">
+      <h3>Sponsors</h3>
+      <div id="sponsors-content"></div>
+    </div>
+  </div> -->
+
+  <!-- <div id="sponsors">
+    <img id="sponsors-sproul" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/sproul" />
+    <h3>Alumni Network</h3>
+    <p>Where our members continue to build and contribute to various companies and industries.</p>
+      <div id="sponsors-content">
+        <a>
+          <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/sponsors/citadel.png">
+        </a>
+        <a>
+          <img src="https://iili.io/HY6ZF8g.png">
+        </a>
+        <a style="scale:75%">
+          <img src="https://iili.io/HY6ZucX.png">
+        </a>
+        <a a style="scale:85%">
+          <img src="https://iili.io/HY6ZwDx.png">
+        </a>
+        <a a style="scale:85%">
+          <img src="https://iili.io/HY6DXZx.png">
+        </a>
+        <a style="scale:115%">
+          <img src="https://iili.io/HY6m7gS.png">
+        </a>
+        <a style="scale:75%">
+          <img src="https://iili.io/HY6pdv9.png">
+        </a>
+        <a style="scale:75%">
+          <img src="https://iili.io/HY6yOxa.png">
+        </a>
+        <a style="scale:125%">
+          <img src="https://iili.io/HY6ypJS.png">
+        </a>
+        <a style="scale:55%">
+          <img src="https://iili.io/HYP9oe1.png">
+        <a style="scale:100%">
+          <img src="https://iili.io/HYP9ep9.png">
+        </a>
+        <a style="scale:100%">
+          <img src="https://iili.io/HYPHbA7.png">
+        </a>
+        <a style="scale:80%">
+          <img src="https://iili.io/HYPJBN1.png">
+        </a>
+        <a style="scale:85%">
+          <img src="https://iili.io/HYPJ45B.png">
+        </a>
+        <a style="scale:95%">
+          <img src="https://iili.io/HYPquLP.png">
+        </a>
+        <a style="scale:90%">
+          <img src="https://iili.io/HYP2CGa.png">
+        </a>
+        <a style="scale:90%">
+          <img src="https://iili.io/HYP31ig.png">
+        </a>
+        <a style="scale:75%">
+          <img src="https://iili.io/HYPF51s.png">
+        </a>
+        <a style="scale:120%">
+          <img src="https://iili.io/HYPKCGe.png">
+        </a>
+        <a style="scale:80%">
+          <img src="https://iili.io/HYPKXtI.png">
+        </a>
+        <a style="scale:95%">
+          <img src="https://iili.io/HYPBE8b.png">
+        </a>
+        <a style="scale:145%; margin-left:5%; margin-right:5%">
+          <img src="https://iili.io/HYPCD11.png">
+        </a>
+        <a style="scale:120%;">
+          <img src="https://iili.io/HYPnrGI.png">
+        </a>
+        <a style="scale:130%; margin-left:5%; margin-right:5%">
+          <img src="https://iili.io/HYPo1cX.png">
+        </a>
+        <a>
+          <img src="https://iili.io/HYPoZUF.png">
+        </a>
+        <a>
+          <img src="https://iili.io/HYPxeXR.png">
+        </a>
+        <a style="scale: 125%">
+          <img src="https://iili.io/HYPzfEB.png">
+        </a>
+        <a style="scale: 125%">
+          <img src="https://iili.io/HYPTLhJ.png">
+        </a>
+        <a style="scale: 80%">
+          <img src="https://iili.io/HYPR9xs.png">
+        </a>
+        <a style="scale: 80%">
+          <img src="https://iili.io/HYP5NaV.png">
+        </a>
+        <a style="scale: 150%; margin-left: 5%; margin-right: 5%">
+          <img src="https://iili.io/HYP7FA7.png">
+        </a>
+        <a style="scale: 150%; margin-left: 5%;margin-right: 5%;">
+          <img src="https://iili.io/HYPY8Ba.png">
+        </a>
+        <a style="scale: 100%">
+          <img src="https://iili.io/HYPcuHl.png">
+        </a>
+        <a style="scale: 100%">
+          <img src="https://iili.io/HYPcSJR.png">
+        </a>
+        <a style="scale: 90%">
+          <img src="https://iili.io/HYPlSEu.png">
+        </a>
+        <a style="scale: 90%">
+          <img src="https://iili.io/HYP00yQ.png">
+        </a>
+      </div>
+
+    <img id="bear" src="./vectors/sleeping-bear.svg" alt="Sleeping Bear" />
+  </div>  -->
+
+  <!-- Footer -->
+  <div id="footer" style="width: 100%">
+    <div id="footer-content">
+      <a href="/"><img id="footer-logo" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png" /></a>
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <a href="/">Home</a>
+          <a href="http://cubstart.com">Cubstart</a>
+          <a href="https://ai.calhacks.io/">UC Berkeley AI Hackathon</a>
+        </div>
+        <div class="footer-links-column">
+          <a href="/sponsor">Sponsor Us</a>
+          <a href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/coc.pdf" target="_blank" rel="noopener noreferrer">Code of Conduct</a>
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">MLH
+            Code of Conduct</a>
+          <div>
+            <a href="https://www.facebook.com/CalHacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon" src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/facebook.svg" />
+            </a>
+            <a href="https://twitter.com/CalHacks" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon" src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/twitter.svg" />
+            </a>
+            <a href="https://www.instagram.com/calhacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon" src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/instagram.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-column"></div>
+      </div>
+      <div id="footer-tagline">
+        <h5>Made with &#x2661;, by Cal Hacks</h5>
+      </div>
+    </div>
+    <div id="footer-background"></div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+  const jsConfetti = new JSConfetti()
+  
+  const form = document.getElementById("email-signup-form");
+  form.addEventListener("submit", handleSubmitForm);
+  console.log(form)
+
+
+  function handleSubmitForm(event) {
+    event.preventDefault();
+    const API_BASE_URL = "https://api.calhacks.io";
+    const data = new FormData(event.target);
+    
+    const dataObject = Object.fromEntries(data.entries());
+    const email = data.get("email");
+
+    if (email === "") { return; }
+
+
+    const statusDescription = document.getElementById("status-description");
+    const response = fetch(`${API_BASE_URL}/static/subscribe`, {
+      mode: 'cors',
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        list: "ch",
+      }),
+    }).then(function (data) {
+
+      if (data.status === 204) {
+        // Success
+        jsConfetti.addConfetti()
+        // statusDescription.innerHTML = `<i class="material-icons">check_circle</i> Thanks, see you soon!`;
+        // statusDescription.style.color = "#22c55e";
+      }
+
+      form.reset();
+
+
+    }).catch(function (err) {
+      console.warn('Something went wrong.', err);
+
+      statusDescription.innerHTML = ` <i class="material-icons">error</i> Something went wrong. Please try again.`;
+      statusDescription.style.color = "#ef4444";
+    });
+  }
+</script>
+<script>
+  const apiHost = 'https://api.calhacks.io';
+
+  const scrollToId = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+    toggleMenu(false);
+  }
+
+  $('.carousel').carousel({
+    interval: 2000
+  });
+
+  const toggleMenu = (force) => {
+    let topnav = document.getElementById("topnav");
+    if (topnav.className === "" && (force === true || force === undefined)) {
+      topnav.className += "responsive";
+    } else if (topnav.className !== "" && (force === false || force === undefined)) {
+      topnav.className = "";
+    }
+  };
+
+  const toggleAnswer = (question) => {
+    const parent = question.parentNode;
+    const answer = parent.querySelector(".faq-answer");
+    const icon = parent.querySelector(".plus-minus");
+    if (answer.style.display === "block") {
+      icon.classList.remove('active');
+      answer.style.display = "none";
+      parent.style.backgroundColor = "";
+      icon.style.setProperty("--plus-minus-color", "#E56346");
+    } else {
+      icon.classList.add('active');
+      answer.style.display = "block";
+      parent.style.backgroundColor = "#0A2457";
+      icon.style.setProperty("--plus-minus-color", "#85A8EC");
+    }
+  };
+
+  /* Splash terminal animation @source https://codepen.io/Sirop/pen/jZaQdV */
+  const hoverMouse = function(content, background) {
+    content.each(function() {
+      const $self = $(this);
+      const $background = background
+      let hover = false;
+      const offsetHoverMax = $self.attr("offset-hover-max") || 0.6;
+      const offsetHoverMin = $self.attr("offset-hover-min") || 0.5;
+
+      var attachEventsListener = function() {
+        $(window).on("mousemove", function(e) {
+          var hoverArea = hover ? offsetHoverMax : offsetHoverMin;
+
+          // cursor
+          var cursor = {
+            x: e.clientX,
+            y: e.clientY - $(window).scrollTop()
+          };
+
+          // size
+          var width = $self.outerWidth();
+          var height = $self.outerHeight();
+
+          // position
+          var offset = $self.offset();
+          var elPos = {
+            x: offset.left + width / 2,
+            y: offset.top + height / 2
+          };
+
+          // comparaison
+          var x = cursor.x - elPos.x;
+          var y = cursor.y - elPos.y;
+
+          // dist
+          var dist = Math.sqrt(x * x + y * y);
+
+          // mutex hover
+          var mutHover = false;
+
+          // anim
+          if (dist < width * hoverArea) {
+            mutHover = true;
+            if (!hover) {
+              hover = true;
+            }
+            onHover(x, y);
+          }
+
+          // reset
+          if (!mutHover && hover) {
+            onLeave();
+            hover = false;
+          }
+        });
+      };
+
+      var onHover = function(x, y) {
+        TweenMax.to($self, 0.4, {
+          x: x * 0.015,
+          y: y * 0.01,
+          //scale: .9,
+          rotation: x * 0.01,
+          ease: Power2.easeOut
+        });
+
+        if (background) {
+          TweenMax.to($background, 0.4, {
+            x: x * 0.2 + 30,
+            y: y * 0.1,
+            //scale: .9,
+            rotation: x * 0.02,
+            ease: Power2.easeOut
+          });
+        }
+      };
+
+      var onLeave = function() {
+        TweenMax.to($self, 1, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          rotation: 0,
+          ease: Elastic.easeOut.config(0.2, 0.1)
+        });
+
+        if (background) {
+          TweenMax.to($background, 1, {
+            x: 0,
+            y: 0,
+            scale: 1,
+            rotation: 0,
+            ease: Elastic.easeOut.config(0.2, 0.1)
+          });
+        }
+      };
+
+      attachEventsListener();
+    });
+  };
+
+  hoverMouse($("#splash-content-front"), $("#splash-background-outline"));
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const belong_1 = gsap.utils.selector(".belong-parallax")("#belong-1");
+  const belong_2 = gsap.utils.selector(".belong-parallax")("#belong-2");
+  const belong_3 = gsap.utils.selector(".belong-parallax")("#belong-3");
+
+  gsap.to(belong_1, {
+    x: -500,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#belong-block",
+      pin: false,
+      scrub: 1,
+    }
+  });
+
+  gsap.to(belong_2, {
+    x: -300,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#belong-block",
+      pin: false,
+      scrub: 1,
+    }
+  });
+
+  gsap.to(belong_3, {
+    x: -700,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#belong-block",
+      pin: false,
+      scrub: 1,
+    }
+  });
+  
+  /*
+  const outline = document.querySelector('#splash-background-outline');
+  const content = document.querySelector('#splash-content-front');
+  
+  hoverMouse($("#splash-content-front"), $("#splash-background-outline"));
+  
+
+  /* ACTIVATE WHEN SPONSORS ARE ADDED */
+
+  // const getSponsors = () => {
+  //   const sponsorLogos = [];
+
+  //   for (let i = 0; i < sponsorLogos.length; i += 1) {
+  //     let logo = document.createElement('img');
+  //     logo.src = 'https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/live/sponsors/' + sponsorLogos[i];
+  //     document.getElementById("sponsors-content").appendChild(logo);
+  //   }
+  // }
+
+  // getSponsors();
+</script>
+
+<script>
+  const carousel = {
+      run: function () {
+        $(".carousel__slide:gt(0)").hide();
+        setInterval(function () {
+          $(".carousel__slide:first")
+            .fadeOut(0)
+            .next()
+            .fadeIn(0)
+            .end()
+            .appendTo(".carousel");
+        }, 2200);
+      }
+    };
+    carousel.run();
+</script>
+
+
+</html>

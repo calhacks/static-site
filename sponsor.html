@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Sentry Error Monitoring -->
+  <script src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js"
+    integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq"
+    crossorigin="anonymous"></script>
+  <script>
+    Sentry.init({
+      dsn: "https://49be4fdd0db3435884b9a5c33b20f5ab@sentry.io/2836115",
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158603824-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-158603824-3");
+  </script>
+  <link rel="shortcut icon" href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/favicon.ico" />
+  <link rel="stylesheet" href="./css/sponsor/sponsor.css?v=2" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Google Fonts: Space Grotesk, Space Mono, Karla -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@700&display=swap"
+    rel="stylesheet" />
+  <!-- For responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <!-- reCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lf1RNIUAAAAAI-VzP0tQ0BF8ckTpUw1F5ZUDOy7"></script>
+  <title>Sponsor – Hackathons at Berkeley</title>
+  <!-- SEO for 8.0 -->
+  <meta name="description"
+    content="Help support Cal Hacks, the largest collegiate hackathon, and make Cal Hacks your event." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sponsor – Hackathons at Berkeley" />
+  <meta property="og:description"
+    content="Help support Cal Hacks, the largest collegiate hackathon, and make Cal Hacks your event." />
+  <meta property="og:image" content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg" />
+  <meta property="og:url" content="https://calhacks.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hackathons at Berkeley" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@calhacks" />
+  <meta name="twitter:creator" content="@calhacks" />
+  <meta name="twitter:title" content="Sponsor – Cal Hacks" />
+  <meta name="twitter:description"
+    content="Help support Cal Hacks, the largest collegiate hackathon, and make Cal Hacks your event." />
+  <meta name="twitter:image"
+    content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg" />
+  <meta property="twitter:image:alt" content="Cal Hacks" />
+</head>
+
+<body>
+  <!-- Splash (top 100vh of page) -->
+  <div id="splash">
+    <a href="/"><img id="logo"
+        src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png" /></a>
+
+    <!-- Responsive navbar -->
+    <div id="topnav">
+      <div class="nav-left">
+        <div class="nav-page">
+          <a href="/" class="page">Home</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/about" class="page">About</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/inclusion" class="page">Inclusion</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/sponsor" class="page active">Sponsor Us</a>
+          <div class="nav-indicator active"></div>
+        </div>
+      </div>
+
+      <!-- Initiatives Dropdown -->
+      <div class="nav-page nav-dropdown nav-desktop-only">
+        <a href="#" class="page">Other Initiatives</a>
+        <div class="nav-indicator"></div>
+        <div class="dropdown">
+          <a href="https://cubstart.com">Cubstart</a>
+          <a href="https://fellowship.calhacks.io">Fellowship</a>
+        </div>
+      </div>
+
+      <!-- Replace initiatives dropdown in responsive menu with contents since it is already a vertical menu -->
+      <div class="nav-page nav-responsive-only">
+        <a href="https://cubstart.com/" class="page">Cubstart</a>
+        <div class="nav-indicator"></div>
+      </div>
+      <div class="nav-page nav-responsive-only">
+        <a href="https://fellowship.calhacks.io" class="page">Fellowship</a>
+        <div class="nav-indicator"></div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <!-- MLH Badge -->
+    <a id="mlh-trust-badge"
+      href="https://mlh.io/seasons/2024/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=gray"
+      target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-gray.svg"
+        alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
+    <!-- Splash body -->
+    <div id="splash-body">
+      <div id="splash-content">
+        <h1>Make Cal Hacks your event.</h1>
+        <div class="splash-section">
+          <h4>Establish your brand!</h4>
+          <p>
+            Cal Hacks is the perfect way to establish your brand and build and
+            grow awareness for your company among thousands of talented
+            engineers.
+          </p>
+        </div>
+        <div class="splash-section">
+          <h4>Connect with top candidates!</h4>
+          <p>
+            We can provide you everything you need to find top talent in the
+            tech and hacker community.
+          </p>
+        </div>
+        <div class="splash-section">
+          <h4>Show off your tech!</h4>
+          <p>
+            Cal Hacks is the largest collegiate hackathon, the best place to
+            display your tech and see hackers use your APIs in creative and
+            innovative ways.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div id="splash-form">
+          <h3>Let's get in touch!</h3>
+          <input id="name-input" placeholder="Full Name" />
+          <input id="company-input" placeholder="Company" />
+          <input id="sender-input" placeholder="Email" />
+          <textarea id="content-input" class="long" placeholder="Inquiry" rows="5"></textarea>
+          <button id="submit-input" class="dark noshadow" onclick="contact()">
+            Send!
+          </button>
+          <h4 id="contact-confirmation" class="hide">
+            Thanks for reaching out! We'll be in touch shortly :)
+          </h4>
+        </div>
+        <img class="phone-ddoski"
+          src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/ddoski-with-phone.png" />
+      </div>
+      <img class="wave" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/wave_2" />
+    </div>
+
+    <!-- Down indicator -->
+    <i id="down-indicator" class="material-icons" onclick="scrollToContent();">
+      keyboard_arrow_down
+    </i>
+  </div>
+  <div id="content">
+    <div id="stats" class="content-section">
+      <h2>Be a part of...</h2>
+      <div id="past-hacks-metrics">
+        <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/metrics_shape_1.svg" />
+        <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/metrics_shape_2.svg" />
+        <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/metrics_shape_3.svg" />
+        <img style="width: 9rem"
+          src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/metrics_shape_4.svg" />
+      </div>
+    </div>
+    <div id="testimonials" class="content-section">
+      <h2>Testimonials</h2>
+      <div id="testimonials-body">
+        <div class="testimonial">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/images/cal_hacks_1.jpg" />
+          <p>
+            “Our booth was swarmed with students interested in both full-time
+            and internship opportunities... We ran out of nearly all the swag
+            we brought with us ... even my stack of business cards... As a
+            recruiter, this was a dream opportunity: getting to chat with
+            hundreds of energetic, passionate sutdents...” <br /><br />
+            &mdash; rideOS
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/images/cal_hacks_2.jpg" />
+          <p>
+            “Cal Hacks 6.0 blew me away... We were astounded by both the
+            creativity and resolve demonstrated at Cal Hacks. We wish we could
+            have given all of our integrations an award.” <br /><br />
+            &mdash; DocuSign
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="past" class="content-section">
+      <h2>Past Sponsors</h2>
+      <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/ch_6_sponsor_grid_blue+1.svg" />
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footer-content">
+      <a href="/"><img id="footer-logo"
+          src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png" /></a>
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <a href="/">Home</a>
+          <a href="https://apply.calhacks.io" target="_blank" rel="noopener noreferrer">Hackathon</a>
+          <a href="https://cubstart.com/">Cubstart</a>
+          <a href="/fellowship">Fellowship</a>
+        </div>
+        <div class="footer-links-column">
+          <a href="/sponsor">Sponsor Us</a>
+          <a href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/coc.pdf" target="_blank"
+            rel="noopener noreferrer">Code of Conduct</a>
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">MLH
+            Code of Conduct</a>
+          <div>
+            <a href="https://www.facebook.com/CalHacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/facebook.svg" />
+            </a>
+            <a href="https://twitter.com/CalHacks" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/twitter.svg" />
+            </a>
+            <a href="https://www.instagram.com/calhacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/instagram.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-column"></div>
+      </div>
+      <div id="footer-tagline">
+        <h5>Made with &#x2661;, by Cal Hacks</h5>
+      </div>
+    </div>
+    <div id="footer-background"></div>
+  </div>
+</body>
+<script>
+  const scrollToContent = function () {
+    document.getElementById("content").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  function contact() {
+    const name = document.getElementById("name-input").value;
+    const sender = document.getElementById("sender-input").value;
+    const company = document.getElementById("company-input").value;
+    const content = document.getElementById("content-input").value;
+    const recipient = "sponsorship@calhacks.io";
+    const subject = "Sponsorship Inquiry: " + name + " from " + company;
+
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute("6Lf1RNIUAAAAAI-VzP0tQ0BF8ckTpUw1F5ZUDOy7", {
+          action: "sponsor_form",
+        })
+        .then(function (token) {
+          fetch("https://api.calhacks.io/static/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              sender,
+              content,
+              recipient,
+              subject,
+              token,
+            }),
+          }).then((response) => {
+            if (response.status !== 204) return;
+
+            document.getElementById("name-input").value = "";
+            document.getElementById("sender-input").value = "";
+            document.getElementById("company-input").value = "";
+            document.getElementById("content-input").value = "";
+
+            document.getElementById("submit-input").classList.add("hide");
+            document
+              .getElementById("contact-confirmation")
+              .classList.remove("hide");
+          });
+        });
+    });
+  }
+
+  function toggleMenu() {
+    let topnav = document.getElementById("topnav");
+    if (topnav.className === "") {
+      topnav.className += "responsive";
+    } else {
+      topnav.className = "";
+    }
+  }
+</script>
+
+</html>

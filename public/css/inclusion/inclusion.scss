@@ -1,0 +1,381 @@
+@use "../common/common";
+
+@-webkit-keyframes bobble {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bobble {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes clear {
+  0% {
+    opacity: 0,
+  }
+  100% {
+    opacity: 0,
+  }
+}
+
+@-webkit-keyframes clear {
+  0% {
+    opacity: 0,
+  }
+  100% {
+    opacity: 0,
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+body {
+  background-color: common.$theme-background;
+}
+
+#splash {
+  height: unset;
+  background: common.$theme-background;
+  position: relative;
+  overflow-x: hidden;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #splash-body {
+    width: 100%;
+    padding: 3rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    color: common.$theme-darkblue;
+
+    @media only screen and (max-width: 850px) {
+      flex-direction: column;
+      margin-top: 6rem;
+    }
+
+    #splash-img {
+      margin-right: 6rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+
+      #splash-main {
+        height: 24rem;
+      }
+
+      @media only screen and (max-width: 850px) {
+        margin-top: -2rem;
+        margin-bottom: -3rem;
+        margin-right: 0;
+
+        #splash-main {
+          // margin-bottom: -5rem;
+          width: 80%;
+        }
+      }
+    }
+
+    #splash-content {
+      max-width: 580px;
+      z-index: 1;
+      padding: 2rem 4rem 1rem;
+
+      @media only screen and (max-width: 850px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 5rem;
+      }
+      
+      #splash-text {
+        padding: 1rem 0rem;
+      }
+      
+      @media only screen and (max-width: 850px) {
+        margin-top: -2rem;
+
+        #splash-text {
+          padding: 1rem 5rem;
+        }
+      }
+    }
+  }
+
+  #splash-footer-background {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  #splash-footer {
+    width: 100%;
+    color: white;
+    margin-top: -1rem;
+    background-color: common.$theme-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+
+    h2 {
+      color: white;
+    }
+    
+    #splash-footer-title {
+      padding-top: 2rem;
+      width: calc(90% - 100px);
+      text-align: center;
+      @media only screen and (max-width: 850px) {
+        padding-bottom: 2rem;
+      }
+    }
+
+    #splash-footer-content {
+      display: flex;
+      width: calc(90% - 100px);
+      max-width: 1000px;
+
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      li {
+        list-style: none;
+        width: 15rem;
+        float: left;
+      }
+
+      a {
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      #splash-footer-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        #club-list {
+          margin-top: 1rem;
+        }
+      }
+
+      #splash-footer-image {
+        padding: 4rem;
+        width: 80%;
+        max-width: 500px;
+
+        @media only screen and (max-width: 850px) {
+          width: 400px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 850px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      #splash-footer-image {
+        display: flex;
+        width: 50%;
+        padding: 2rem;
+        // margin-top: -20%;
+        right: auto;
+      }
+    }
+  }
+}
+
+.app-center {
+  width: 60%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  @media only screen and (max-width: 850px) {
+    width: 80%;
+    max-width: none;
+  }
+}
+
+h3 {
+  font-size: 32px;
+
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+#content {
+  padding: 8rem 0;
+  color: common.$theme-text;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 850px) {
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .content-body {
+    display: flex;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .content-list {
+      margin: 2rem 0;
+  
+      li {
+        list-style: none;
+        font-style: italic;
+        line-height: 2rem;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+
+    .content-image {
+      margin: 0 3rem;
+      @media only screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+  }
+}
+
+#positive {
+  padding: 5rem 0rem;
+  background-color: common.$theme-darkblue;
+  color: common.$theme-background;
+
+  h3 {
+    margin: 1.5rem 0rem;
+  }
+
+  #growth {
+    font-weight: 400;
+  }
+
+  #diversity {
+    font-weight: 700;
+  }
+
+  #team-of {
+    font-weight: 700;
+  }
+}
+
+#sponsors {
+  padding: 8rem 0;
+  color: common.$blue;
+
+  #sponsors-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 30%;
+      height: auto;
+
+      padding: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 4rem 0;
+
+    #sponsors-content img {
+      margin: 0;
+      width: calc(50% - 1rem);
+    }
+  }
+}
+
+#footer {
+  height: 25rem;
+
+  #footer-content {
+    padding-top: 6rem;
+    height: calc(100% - 6rem);
+  }
+
+  #footer-background {
+    background-color: common.$theme-darkblue;
+    height: 25rem;
+  }
+}

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Sentry Error Monitoring -->
+  <script src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js"
+    integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq"
+    crossorigin="anonymous"></script>
+  <script>
+    Sentry.init({
+      dsn: "https://49be4fdd0db3435884b9a5c33b20f5ab@sentry.io/2836115",
+      ignoreErrors: [
+        "Non-Error promise rejection captured with value: Timeout",
+        "TypeError: NetworkError when attempting to fetch resource.",
+        "Error: ResizeObserver loop limit exceeded",
+      ],
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158603824-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-158603824-3");
+  </script>
+  <link rel="shortcut icon" href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/favicon.ico" />
+  <link rel="stylesheet" href="./css/about/about.css?v=2" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Google Fonts: Space Grotesk, Space Mono, Karla -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@700&display=swap"
+    rel="stylesheet" />
+  <!-- For responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+
+  <title>About – Hackathons at Berkeley</title>
+
+  <!-- SEO for 8.0 -->
+  <meta name="description"
+    content="We're a nonprofit organization composed of students passionate about fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About – Hackathons at Berkeley" />
+  <meta property="og:description"
+    content="We're a nonprofit organization composed of students passionate about fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology." />
+  <meta property="og:image" content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg" />
+  <meta property="og:url" content="https://calhacks.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hackathons at Berkeley" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@calhacks" />
+  <meta name="twitter:creator" content="@calhacks" />
+  <meta name="twitter:title" content="About – Cal Hacks" />
+  <meta name="twitter:description"
+    content="We're a nonprofit organization composed of students passionate about fostering a culture of hacking, entrepreneurship, and social good via the empowerment of technology." />
+  <meta name="twitter:image"
+    content="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/og-image.jpg" />
+  <meta property="twitter:image:alt" content="Cal Hacks 8.0, October 22-24. apply.calhacks.io" />
+</head>
+
+<body>
+  <!-- Splash (top 100vh of page) -->
+  <div id="splash">
+    <a href="/"><img id="logo"
+        src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png" /></a>
+    <!-- Responsive navbar -->
+    <div id="topnav">
+      <div class="nav-left">
+        <div class="nav-page">
+          <a href="/" class="page">Home</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/about" class="page active">About</a>
+          <div class="nav-indicator active"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/inclusion" class="page">Inclusion</a>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-page">
+          <a href="/sponsor" class="page">Sponsor Us</a>
+          <div class="nav-indicator"></div>
+        </div>
+      </div>
+
+      <!-- Initiatives Dropdown -->
+      <div class="nav-page nav-dropdown nav-desktop-only">
+        <a href="#" class="page">Other Initiatives</a>
+        <div class="nav-indicator"></div>
+        <div class="dropdown">
+          <a href="http://cubstart.com">Cubstart</a>
+          <a href="https://fellowship.calhacks.io">Fellowship</a>
+        </div>
+      </div>
+      <!-- Replace initiatives dropdown in responsive menu with contents since it is already a vertical menu -->
+      <div class="nav-page nav-responsive-only">
+        <a href="http://cubstart.com" class="page">Cubstart</a>
+        <div class="nav-indicator"></div>
+      </div>
+      <div class="nav-page nav-responsive-only">
+        <a href="https://fellowship.calhacks.io" class="page">Fellowship</a>
+        <div class="nav-indicator"></div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="material-icons">menu</i>
+    </a>
+    <!-- MLH Badge -->
+    <a id="mlh-trust-badge"
+      href="https://mlh.io/seasons/2024/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=gray"
+      target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-gray.svg"
+        alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
+    <div id="splash-body">
+      <img id="splash-img" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/images/teamphoto22.jpg" />
+      <div id="splash-content">
+        <h2>About Us</h2>
+        <br />
+        <p>
+          We're a nonprofit organization composed of students passionate about
+          fostering a culture of hacking, entrepreneurship, and social good
+          via the empowerment of technology.
+        </p>
+        <br />
+        <p>
+          Our mission is to empower others with technology to create solutions
+          to better the world.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div id="initiatives" class="content-section">
+      <div class="content-section-indicator"></div>
+      <h2>Initiatives</h2>
+      <div id="initiatives-content" class="content">
+        <div id="hackathon-desc">
+          <a href="https://apply.calhacks.io" target="_blank" rel="noopener noreferrer">
+            <h3>Hackathon</h3>
+          </a>
+          <p>
+            Our annual hackathon, hosted at UC Berkeley's beautiful campus, is
+            where the technology of the future is born.
+          </p>
+        </div>
+        <div id="cubstart-desc">
+          <a href="http://cubstart.com">
+            <h3>Cubstart</h3>
+          </a>
+          <p>
+            A program for new hackers designed to make the hackathon
+            experience less intimidating but more accessible!
+          </p>
+        </div>
+        <div id="fellowship-desc">
+          <a href="/fellowship">
+            <h3>Fellowship</h3>
+          </a>
+          <p>
+            A program that hosts hackathon teams after the event to continue
+            building and growing their projects to where they want to take it
+            next.
+          </p>
+        </div>
+        <a id="hackathon-img" href="https://apply.calhacks.io">
+          <div class="initiative-image-container">
+            <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/hackanile.png" />
+            <div class="circle"></div>
+          </div>
+        </a>
+        <a id="cubstart-img" href="http://cubstart.com">
+          <div class="initiative-image-container">
+            <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png" />
+            <div class="circle"></div>
+          </div>
+        </a>
+        <a id="fellowship-img" href="/fellowship">
+          <div class="initiative-image-container">
+            <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/fellowship.png" />
+            <div class="circle"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="virtual-experiments" class="content-section">
+      <div class="content-section-indicator"></div>
+      <h2>Virtual Experiments</h2>
+      <div class="virtual-experiment">
+        <div class="virtual-experiment-image">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/helloworld/icon.svg" />
+        </div>
+        <div class="virtual-experiment-content">
+          <h3>hello:world</h3>
+          <p>
+            In Spring 2021, we said hello to the world - virtually, of course.
+            Hackers from all over the world created, innovated, and designed
+            in this 36-hour hackathon.
+          </p>
+          <button class="dark" onclick="window.open('https://helloworld.calhacks.io', '_blank')">
+            Visit Website
+          </button>
+        </div>
+      </div>
+      <div class="virtual-experiment">
+        <div class="virtual-experiment-image">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/hackmonth/illustration.png" />
+        </div>
+        <div class="virtual-experiment-content">
+          <h3>Hack Month</h3>
+          <p>
+            In Fall 2020, Cal Hacks hosted a month long initiative to foster a
+            love for creating and rediscover the fun in building for
+            university students during the virtual semester.
+          </p>
+          <button class="dark" onclick="window.open('https://hackmonth.calhacks.io', '_blank')">
+            Visit Website
+          </button>
+        </div>
+      </div>
+      <div class="virtual-experiment">
+        <div class="virtual-experiment-image">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/hacknow/branding/logo.png" />
+        </div>
+        <div class="virtual-experiment-content">
+          <h3>hack:now</h3>
+          <p>
+            In Spring 2020, Cal Hacks launched a global online hackathon to
+            foster innovative and technical solutions to challenges faced
+            around the COVID-19 pandemic.
+          </p>
+          <button class="dark" onclick="window.open('https://hacknow.calhacks.io', '_blank')">
+            Visit Website
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="team" class="content-section">
+      <div class="content-section-indicator"></div>
+      <h2>Our Team</h2>
+      <div id="team-content" class="content"></div>
+      <h4 id="team-contact" style="margin-top: 4rem; text-align: center">
+        Have a question for us? Email
+        <span id="team-email" onclick="copyEmail()">team@calhacks.io</span>.
+      </h4>
+    </div>
+    <div id="beyond-cal-hacks" class="content-section">
+      <div class="content-section-indicator"></div>
+      <h2>Beyond Cal Hacks</h2>
+      <br />
+      <p>
+        Our members and alumni have continued their success through
+        internships and full-time employment across a variety of industries.
+      </p>
+      <div id="company-content">
+        <a>
+          <img src="https://iili.io/HY6ZF8g.png" />
+        </a>
+        <a style="scale: 75%; margin-top: 19px">
+          <img src="https://iili.io/HY6pdv9.png" />
+        </a>
+        <a>
+          <img src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/9.0/sponsors/citadel.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src=" https://iili.io/HY6ZucX.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HY6ZwDx.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HY6DXZx.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HY6m7gS.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HY6yOxa.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HYPF51s.png" />
+        </a>
+        <a>
+          <img src="https://iili.io/HYPKCGe.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HYP9ep9.png" />
+        </a>
+        <a>
+          <img src="https://iili.io/HY6ypJS.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HYP9oe1.png" />
+        </a>
+        <a style="scale: 75%">
+          <img src="https://iili.io/HYPHbA7.png" />
+        </a>
+        <a>
+          <img src="https://iili.io/HYP2CGa.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footer-content">
+      <a href="/"><img id="footer-logo"
+          src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/hackathonsatberkeley/hackathons-at-berkeley-logo.png" /></a>
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <a href="/">Home</a>
+          <a href="https://apply.calhacks.io" target="_blank" rel="noopener noreferrer">Hackathon</a>
+          <a href="http://cubstart.com">Cubstart</a>
+          <a href="/fellowship">Fellowship</a>
+        </div>
+        <div class="footer-links-column">
+          <a href="/sponsor">Sponsor Us</a>
+          <a href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/coc.pdf" target="_blank"
+            rel="noopener noreferrer">Code of Conduct</a>
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">MLH
+            Code of Conduct</a>
+          <div>
+            <a href="https://www.facebook.com/CalHacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/facebook.svg" />
+            </a>
+            <a href="https://twitter.com/CalHacks" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/twitter.svg" />
+            </a>
+            <a href="https://www.instagram.com/calhacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/instagram.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-column"></div>
+      </div>
+      <div id="footer-tagline">
+        <h5>Made with &#x2661;, by Cal Hacks</h5>
+      </div>
+    </div>
+    <div id="footer-background"></div>
+  </div>
+  <!-- <div class="popup close" id="hacknow-popup">
+    <img class="popup-image"
+      src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/hacknow/branding/footer-logo.png"
+      onclick="window.open('https://hacknow.calhacks.io', '_blank');" />
+    <div class="popup-content" onclick="window.open('https://hacknow.calhacks.io', '_blank');">
+      <h3>hack:now</h3>
+      <p>We're hosting an all-online hackathon from April 24 to 26 to tackle some of today's most pressing problems!
+        Click
+        to learn more :)</p>
+    </div>
+    <i class="material-icons" onclick="closePopup();">close</i>
+  </div> -->
+</body>
+<script>
+  function subscribe() {
+    const email = document.getElementById("email-input").value;
+
+    fetch("https://api.calhacks.io/static/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        list: "ch",
+      }),
+    }).then((response) => {
+      if (response.status !== 204) return;
+
+      document.getElementById("email-input").value = "";
+
+      document
+        .getElementById("notification-confirmation")
+        .classList.remove("hide");
+      document.getElementById("notification-input").classList.add("hide");
+    });
+  }
+
+  function copyEmail() {
+    const el = document.createElement("textarea");
+    el.value = "team@calhacks.io";
+    el.setAttribute("readonly", "");
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+
+    if (!this.emailCopied) {
+      document.getElementById("team-contact").innerHTML += " Copied :)";
+    }
+  }
+
+  const scrollToContent = function () {
+    document.getElementById("content").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const S3_URI =
+    "https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images";
+  const active_directors = [
+    ["Alex", "https://www.linkedin.com/in/alexandersgoldberg/"],
+    ["Gina", "https://www.linkedin.com/in/ginac10/"],
+    ["Aylin", "https://www.linkedin.com/in/aylinsanchez/"],
+    ["Nathan", "https://www.linkedin.com/in/nathandtran/"],
+    ["Chris", "https://www.linkedin.com/in/chrisychou/"],
+    ["Angelina", "https://www.linkedin.com/in/angelinaklee/"],
+    ["Oliver", "https://www.linkedin.com/in/oliver-carmont/"],
+    ["Aryan", "https://www.linkedin.com/in/aryanvichare/"],
+    ["Kat", "https://www.linkedin.com/in/itskatcheng/"],
+    ["Natalie", "https://www.linkedin.com/in/natalie-wei/"],
+    ["Enya", "https://www.linkedin.com/in/enya-do-40a643212/"],
+    ["Tony", "https://www.linkedin.com/in/tshong/"],
+    ["Matthew", "https://www.linkedin.com/in/matthewlee626/"],
+    ["Sauhard", "https://www.linkedin.com/in/sauhardjain/"],
+    ["Tiffany2", "https://www.linkedin.com/in/tiffany-yeh-7bb8601b3/"],
+    ["Jessica1", "https://www.linkedin.com/in/lienjessica/"],
+    ["Jessica2", "https://www.linkedin.com/in/jessicang1212/"],
+    ["Andy", "https://www.linkedin.com/in/andy-huang1/"],
+    ["Sid", "https://www.linkedin.com/in/sidmanchkanti/"],
+    ["Annie", "https://www.linkedin.com/in/annieyhlin/"],
+    ["Bryan", "https://www.linkedin.com/in/bryan-chu33/"],
+    ["Kartik", "https://www.linkedin.com/in/kartik-punia-50b28619a/"],
+    ["Kenny", "https://www.linkedin.com/in/kennywchen/"],
+    ["Madhav", "https://www.linkedin.com/in/madhavarshney/"],
+    ["Nick", "https://www.linkedin.com/in/nick-jiang1/"],
+    ["Sophia", "https://www.linkedin.com/in/sophia-baginskis-9b3100208/"],
+    ["Kaaviya", "https://www.linkedin.com/in/kaaviya-sasikumar-56383a20b/"],
+    ["Winston", "https://www.linkedin.com/in/winstonechiong/"],
+    ["Zach", "https://www.linkedin.com/in/zacharychang25/"]
+  ];
+
+  // handle special cases or name collisions,
+  // for example, if there are two "Matthew"s, label them as "Matthew1" and "Matthew2"
+  // and override the display name and urls here.
+  const profileOverride = {
+    Tiffany1: {
+      name: "Tiffany",
+      link: "https://www.linkedin.com/in/wtiffany/",
+    },
+    Tiffany2: {
+      name: "Tiffany",
+      link: "https://www.linkedin.com/in/tiffany-yeh-7bb8601b3/",
+    },
+    Jessica1: {
+      name: "Jessica",
+      link: "https://www.linkedin.com/in/lienjessica/"
+
+    },
+    Jessica2: {
+      name: "Jessica",
+      link: "https://www.linkedin.com/in/jessicang1212/"
+    }
+  };
+
+  const activeList = active_directors.sort().map((director) => {
+    const div = document.createElement("div");
+    div.className = "team-member";
+
+    const img = document.createElement("img");
+    img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
+    // img.setAttribute("loading", "lazy");
+    div.appendChild(img);
+
+    const h4 = document.createElement("h4");
+    h4.innerHTML += `<a ${director[1] ? `href=${director[1]}` : 'style="text-decoration:none;"'
+      }>${director[0]}</a>`;
+    div.appendChild(h4);
+
+    if (profileOverride[director[0]]) {
+      img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
+      h4.innerHTML = `<a href='${profileOverride[director[0]].link}'>${profileOverride[director[0]].name
+        }</a>`;
+    }
+
+    document.getElementById("team-content").appendChild(div);
+  });
+
+  function toggleMenu() {
+    let topnav = document.getElementById("topnav");
+    if (topnav.className === "") {
+      topnav.className += "responsive";
+    } else {
+      topnav.className = "";
+    }
+  }
+</script>
+
+</html>
