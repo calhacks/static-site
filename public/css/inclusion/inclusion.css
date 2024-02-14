@@ -303,6 +303,11 @@ textarea::-moz-placeholder {
     display: flex;
   }
 }
+
+#splash #topnav .nav-page.nav-dropdown {
+  width: 14rem;
+}
+
 #splash #topnav .nav-page.nav-dropdown .dropdown {
   display: none;
   position: absolute;
