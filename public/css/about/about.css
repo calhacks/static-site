@@ -389,9 +389,9 @@ textarea::-moz-placeholder {
     display: none;
   }
   #splash #topnav.responsive {
-    width: 125px;
+    width: 135px;
     position: fixed;
-    top: calc(3rem + 36px);
+    top: calc(1rem + 36px);
     left: -0.8rem;
     right: auto;
     flex-direction: column;
@@ -409,6 +409,7 @@ textarea::-moz-placeholder {
   #splash #topnav.responsive .nav-page a {
     margin: 0;
     display: block;
+    width: 100%;
     font-size: 16px;
   }
   #splash #topnav.responsive .nav-page a.page {
@@ -803,7 +804,7 @@ textarea::-moz-placeholder {
 }
 #content #initiatives #initiatives-content {
   display: grid;
-  grid-template-columns: calc((100% - 2rem) / 3) calc((100% - 2rem) / 3) calc((100% - 2rem) / 3);
+  grid-template-columns: calc((100% - 2rem) / 2) calc((100% - 2rem) / 2);
   column-gap: 1rem;
   row-gap: 4rem;
   grid-template-areas: "hackathon-desc cubstart-desc fellowship-desc" "hackathon-img  cubstart-img  fellowship-img";
@@ -848,7 +849,7 @@ textarea::-moz-placeholder {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-68%, -50%);
   height: 0;
   width: 0;
   background: #c7e9f4;
@@ -862,9 +863,12 @@ textarea::-moz-placeholder {
     flex-direction: row;
     justify-content: center;
   }
+  #content #initiatives #initiatives-content .initiative-image-container .circle {
+    transform: translate(-50%, -50%);
+  }
 }
 #content #initiatives #initiatives-content img {
-  width: 100%;
+  width: 80%;
   transition: all 0.3s ease;
 }
 #content #initiatives #initiatives-content img:hover + .circle {

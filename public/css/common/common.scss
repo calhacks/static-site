@@ -454,10 +454,10 @@ textarea {
       }
 
       &.responsive {
-        width: 125px;
+        width: 135px;
 
         position: fixed;
-        top: calc(3rem + 36px);
+        top: calc(1rem + 36px);
         left: -0.8rem;
         right: auto;
 
@@ -478,6 +478,7 @@ textarea {
           a {
             margin: 0;
             display: block;
+            width: 100%;
 
             font-size: 16px;
 

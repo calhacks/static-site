@@ -383,10 +383,10 @@ textarea::-moz-placeholder {
     display: none;
   }
   #splash #topnav.responsive {
-    width: 100px;
+    width: 135px;
     position: fixed;
     top: calc(1rem + 36px);
-    left: 1rem;
+    left: -0.8rem;
     right: auto;
     flex-direction: column;
     justify-content: start;

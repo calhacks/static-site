@@ -389,9 +389,9 @@ textarea::-moz-placeholder {
     display: none;
   }
   #splash #topnav.responsive {
-    width: 125px;
+    width: 135px;
     position: fixed;
-    top: calc(3rem + 36px);
+    top: calc(1rem + 36px);
     left: -0.8rem;
     right: auto;
     flex-direction: column;
@@ -409,6 +409,7 @@ textarea::-moz-placeholder {
   #splash #topnav.responsive .nav-page a {
     margin: 0;
     display: block;
+    width: 100%;
     font-size: 16px;
   }
   #splash #topnav.responsive .nav-page a.page {
@@ -723,9 +724,6 @@ textarea::-moz-placeholder {
 }
 #splash h1 {
   font-size: 3rem;
-}
-#splash #toggle-icon {
-  margin-top: 40px;
 }
 #splash #banner {
   display: flex;
