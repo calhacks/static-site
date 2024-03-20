@@ -396,35 +396,43 @@
   const S3_URI =
     "https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images";
   const active_directors = [
-    ["Alex", "https://www.linkedin.com/in/alexandersgoldberg/"],
+    ["Alex", "https://www.linkedin.com/in/alexandersgoldberg/", "alex"],
     ["Gina", "https://www.linkedin.com/in/ginac10/"],
-    ["Aylin", "https://www.linkedin.com/in/aylinsanchez/"],
-    ["Nathan", "https://www.linkedin.com/in/nathandtran/"],
-    ["Chris", "https://www.linkedin.com/in/chrisychou/"],
-    ["Angelina", "https://www.linkedin.com/in/angelinaklee/"],
-    ["Oliver", "https://www.linkedin.com/in/oliver-carmont/"],
+    ["Chris", "https://www.linkedin.com/in/chrisychou/", "chris"],
+    ["Angelina", "https://www.linkedin.com/in/angelinaklee/", "angelina"],
+    ["Oliver", "https://www.linkedin.com/in/oliver-carmont/", "oliver"],
     ["Aryan", "https://www.linkedin.com/in/aryanvichare/"],
     ["Kat", "https://www.linkedin.com/in/itskatcheng/"],
     ["Natalie", "https://www.linkedin.com/in/natalie-wei/"],
-    ["Enya", "https://www.linkedin.com/in/enya-do-40a643212/"],
+    ["Enya", "https://www.linkedin.com/in/enya-do-40a643212/", "enya"],
     ["Tony", "https://www.linkedin.com/in/tshong/"],
     ["Matthew", "https://www.linkedin.com/in/matthewlee626/"],
     ["Sauhard", "https://www.linkedin.com/in/sauhardjain/"],
     ["Tiffany2", "https://www.linkedin.com/in/tiffany-yeh-7bb8601b3/"],
     ["Jessica1", "https://www.linkedin.com/in/lienjessica/"],
-    ["Jessica2", "https://www.linkedin.com/in/jessicang1212/"],
+    ["Jessica2", "https://www.linkedin.com/in/jessicang1212/", "jessicang"],
     ["Andy", "https://www.linkedin.com/in/andy-huang1/"],
     ["Sid", "https://www.linkedin.com/in/sidmanchkanti/"],
     ["Annie", "https://www.linkedin.com/in/annieyhlin/"],
-    ["Bryan", "https://www.linkedin.com/in/bryan-chu33/"],
     ["Kartik", "https://www.linkedin.com/in/kartik-punia-50b28619a/"],
-    ["Kenny", "https://www.linkedin.com/in/kennywchen/"],
     ["Madhav", "https://www.linkedin.com/in/madhavarshney/"],
-    ["Nick", "https://www.linkedin.com/in/nick-jiang1/"],
+    ["Nick", "https://www.linkedin.com/in/nick-jiang1/", "nick"],
     ["Sophia", "https://www.linkedin.com/in/sophia-baginskis-9b3100208/"],
-    ["Kaaviya", "https://www.linkedin.com/in/kaaviya-sasikumar-56383a20b/"],
     ["Winston", "https://www.linkedin.com/in/winstonechiong/"],
-    ["Zach", "https://www.linkedin.com/in/zacharychang25/"]
+    ["Zach", "https://www.linkedin.com/in/zacharychang25/"],
+    ["Arhum", "#", "arhum"],
+    ["Bella", "#", "bella"],
+    ["Darren", "#", "darren"],
+    ["Flora", "#", "flora"],
+    ["Justin", "#", "justin"],
+    ["Katie", "#", "katie"],
+    ["Keira", "#", "keira"],
+    ["Kenny", "#", "kenny"],
+    ["Mihir", "#", "mihir"],
+    ["Paarin", "#", "paarin"],
+    ["Sam", "https://github.com/sampoder", "sam"],
+    ["Sara", "#", "sara"],
+    ["Valerie", "#", "valerie"],
   ];
 
   // handle special cases or name collisions,
@@ -455,7 +463,7 @@
     div.className = "team-member";
 
     const img = document.createElement("img");
-    img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
+    img.setAttribute("src", director[2] ? `/img/team/${director[2]}.jpg` : `${S3_URI}/${director[0].toLowerCase()}.jpg`);
     // img.setAttribute("loading", "lazy");
     div.appendChild(img);
 
@@ -465,7 +473,6 @@
     div.appendChild(h4);
 
     if (profileOverride[director[0]]) {
-      img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
       h4.innerHTML = `<a href='${profileOverride[director[0]].link}'>${profileOverride[director[0]].name
         }</a>`;
     }
