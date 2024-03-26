@@ -122,7 +122,7 @@
       target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-gray.svg"
         alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
     <div id="splash-body">
-      <img id="splash-img" src="https://calhacks-sierra.s3.us-west-2.amazonaws.com/assets/images/teamphoto22.jpg" />
+      <img id="splash-img" src="/img/team.jpg" />
       <div id="splash-content">
         <h2>About Us</h2>
         <br />
@@ -149,7 +149,7 @@
             <h3>Hackathon</h3>
           </a>
           <p>
-            Our annual hackathon, hosted at UC Berkeley's beautiful campus, is
+            Cal Hacks, our flagship hackathon hosted in San Fransisco, is
             where the technology of the future is born.
           </p>
         </div>
@@ -396,35 +396,44 @@
   const S3_URI =
     "https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images";
   const active_directors = [
-    ["Alex", "https://www.linkedin.com/in/alexandersgoldberg/"],
+    ["Alex", "https://www.linkedin.com/in/alexandersgoldberg/", "alex"],
     ["Gina", "https://www.linkedin.com/in/ginac10/"],
-    ["Aylin", "https://www.linkedin.com/in/aylinsanchez/"],
-    ["Nathan", "https://www.linkedin.com/in/nathandtran/"],
-    ["Chris", "https://www.linkedin.com/in/chrisychou/"],
-    ["Angelina", "https://www.linkedin.com/in/angelinaklee/"],
-    ["Oliver", "https://www.linkedin.com/in/oliver-carmont/"],
+    ["Chris", "https://www.linkedin.com/in/chrisychou/", "chris"],
+    ["Angelina", "https://www.linkedin.com/in/angelinaklee/", "angelina"],
+    ["Oliver", "https://www.linkedin.com/in/oliver-carmont/", "oliver"],
     ["Aryan", "https://www.linkedin.com/in/aryanvichare/"],
     ["Kat", "https://www.linkedin.com/in/itskatcheng/"],
-    ["Natalie", "https://www.linkedin.com/in/natalie-wei/"],
-    ["Enya", "https://www.linkedin.com/in/enya-do-40a643212/"],
-    ["Tony", "https://www.linkedin.com/in/tshong/"],
-    ["Matthew", "https://www.linkedin.com/in/matthewlee626/"],
+    ["Enya", "https://www.linkedin.com/in/enya-do-40a643212/", "enya"],
     ["Sauhard", "https://www.linkedin.com/in/sauhardjain/"],
-    ["Tiffany2", "https://www.linkedin.com/in/tiffany-yeh-7bb8601b3/"],
-    ["Jessica1", "https://www.linkedin.com/in/lienjessica/"],
-    ["Jessica2", "https://www.linkedin.com/in/jessicang1212/"],
+    ["Jessica1", "https://www.linkedin.com/in/lienjessica/", "jessical"],
+    ["Jessica2", "https://www.linkedin.com/in/jessicang1212/", "jessicang"],
     ["Andy", "https://www.linkedin.com/in/andy-huang1/"],
     ["Sid", "https://www.linkedin.com/in/sidmanchkanti/"],
-    ["Annie", "https://www.linkedin.com/in/annieyhlin/"],
-    ["Bryan", "https://www.linkedin.com/in/bryan-chu33/"],
     ["Kartik", "https://www.linkedin.com/in/kartik-punia-50b28619a/"],
-    ["Kenny", "https://www.linkedin.com/in/kennywchen/"],
     ["Madhav", "https://www.linkedin.com/in/madhavarshney/"],
-    ["Nick", "https://www.linkedin.com/in/nick-jiang1/"],
+    ["Nick", "https://www.linkedin.com/in/nick-jiang1/", "nick"],
     ["Sophia", "https://www.linkedin.com/in/sophia-baginskis-9b3100208/"],
-    ["Kaaviya", "https://www.linkedin.com/in/kaaviya-sasikumar-56383a20b/"],
-    ["Winston", "https://www.linkedin.com/in/winstonechiong/"],
-    ["Zach", "https://www.linkedin.com/in/zacharychang25/"]
+    ["Zach", "https://www.linkedin.com/in/zacharychang25/"],
+    ["Akash", "https://linkedin.com/in/abobba", "akash"],
+    ["Arhum", "https://www.linkedin.com/in/arhum--khan/", "arhum"],
+    ["Bella", "#", "bella"],
+    ["Darren", "#", "darren"],
+    ["Flora", "https://www.linkedin.com/in/florawwang/", "flora"],
+    ["Justin", "http://www.linkedin.com/in/jwonghelloworld", "justin"],
+    ["Katie", "http://www.linkedin.com/in/katie-wang-ang108", "katie"],
+    ["Keira", "https://www.linkedin.com/in/keira-ho-973080249", "keira"],
+    ["Kenny", "https://www.linkedin.com/in/kenny-zhang-jinlin/", "kenny"],
+    ["Jenny", "http://www.linkedin.com/in/jenny-m-trinh", "jenny"],
+    ["Mihir", "#", "mihir"],
+    ["Paarin", "#", "paarin"],
+    ["Isaiah", "#", "isaiah"],
+    ["Sam", "https://github.com/sampoder", "sam"],
+    ["Sara", "#", "sara"],
+    ["Valerie", "https://www.linkedin.com/in/valeriehe/", "valerie"],
+    ["Mark", "https://www.linkedin.com/in/marknour/", "mark"],
+    ["Zoe", "https://www.linkedin.com/in/zoe-tenenbaum", "zoe"]
+    ["Claire", "https://www.linkedin.com/in/claire-chen-581941255", "claire"],
+    ["Prabhas", "https://www.linkedin.com/in/prabhask/", "prabhas"]
   ];
 
   // handle special cases or name collisions,
@@ -440,12 +449,11 @@
       link: "https://www.linkedin.com/in/tiffany-yeh-7bb8601b3/",
     },
     Jessica1: {
-      name: "Jessica",
+      name: "Jessica L",
       link: "https://www.linkedin.com/in/lienjessica/"
-
     },
     Jessica2: {
-      name: "Jessica",
+      name: "Jessica N",
       link: "https://www.linkedin.com/in/jessicang1212/"
     }
   };
@@ -455,7 +463,7 @@
     div.className = "team-member";
 
     const img = document.createElement("img");
-    img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
+    img.setAttribute("src", director[2] ? `/img/team/${director[2]}.jpg` : `${S3_URI}/${director[0].toLowerCase()}.jpg`);
     // img.setAttribute("loading", "lazy");
     div.appendChild(img);
 
@@ -465,7 +473,6 @@
     div.appendChild(h4);
 
     if (profileOverride[director[0]]) {
-      img.setAttribute("src", `${S3_URI}/${director[0].toLowerCase()}.jpg`);
       h4.innerHTML = `<a href='${profileOverride[director[0]].link}'>${profileOverride[director[0]].name
         }</a>`;
     }
