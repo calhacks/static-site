@@ -738,6 +738,13 @@ textarea::-moz-placeholder {
   font-weight: 600;
   font-size: 16px;
 }
+
+#banner {
+  background-color: #60dcff;
+  padding: 40px;
+  text-align: center;
+}
+
 #splash #splash-body {
   width: 100%;
   padding: 3rem 0;
