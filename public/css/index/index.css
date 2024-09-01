@@ -739,9 +739,14 @@ textarea::-moz-placeholder {
   font-size: 16px;
 }
 
+#banner-link {
+  display: block;
+  text-decoration: none; /* Remove underline */
+}
+
 #banner {
   background-color: #60dcff;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
