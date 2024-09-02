@@ -739,9 +739,14 @@ textarea::-moz-placeholder {
   font-size: 16px;
 }
 
+#banner-link {
+  display: block;
+  text-decoration: none; /* Remove underline */
+}
+
 #banner {
   background-color: #60dcff;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -1464,6 +1469,10 @@ h3:first-child {
   hyphenate-limit-lines: 2;
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
+}
+.underline {
+  text-decoration: underline;
+  font-weight: normal; 
 }
 
 @media screen and (max-width: 768px) {
